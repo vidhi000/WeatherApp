@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)file:///C:/Users/HP%202020/Desktop/VIDHI%20RANA%20(AIT%20PROJECT%20WORK)/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Dashboard</title>
+    <!--Bootstrap CSS CDN-->
+    <link rel="stylesheet" href="./index17_files/bootstrap.min.css">
+    <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+    <link rel="stylesheet" href="./index17_files/font-awesome.min.css">
+    <link rel="stylesheet" href="file:///C:/Users/HP%202020/Desktop/VIDHI%20RANA%20(AIT%20PROJECT%20WORK)/style.css">
+</head>
+<body>
+    <!--Jumbotron for Title-->
+    <div class="jumbotron container-fluid mt-2 text-center p-2" style="background-color:#404040 ;color: white;">
+        <h1> <strong>WEATHER FORECASTING</strong></h1>
+    </div>
+    <div class="container">
+        <!--Row for searching a city-->
+        <div class="row">
+            <div class="col-sm-4 bg-light">
+                <!--Here we create an HTML form for handling the inputs-->
+                <h4 class="pt-1"><strong>Search for a City:</strong></h4>
+                <!--Here we create the text box for capturing the search city Name-->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="search-city" aria-label="City Search" aria-describedby="search-button">
+                    <div class="input-group-append">
+                        <button class=" btn bg-primary text-light" id="search-button"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <!--section for search city history-->
+                <button class=" btn btn-primary" type="button" id="clear-history">Clear history</button>
+                <ul class="list-group"><li class="list-group-item" data-value="DELHI">DELHI</li><li class="list-group-item" data-value="GANDHINAGAR">GANDHINAGAR</li><li class="list-group-item" data-value="ANAND">ANAND</li><li class="list-group-item" data-value="NADIAD">NADIAD</li><li class="list-group-item" data-value="KHAMBHAT">KHAMBHAT</li><li class="list-group-item" data-value="LONDON">LONDON</li><li class="list-group-item" data-value="GOA">GOA</li></ul>
+            </div>   
+            <div class="col-sm-8">
+                <div class="row ml-2 border border-dark rounded">
+                    <div class="col-sm-12" id="current-weather">
+                        <h3 class="city-name mb-1 mt-2 bolder" id="current-city">Goa(5/7/2021)<img src="./index17_files/04n@2x.png"></h3>
+                        <p>Temperature:<span class="current" id="temperature">29.21°C</span></p>
+                        <p>Humidity:<span class="current" id="humidity">82%</span></p> 
+                        <p>Wind Speed:<span class="current" id="wind-speed">5.5MPH</span></p>
+                        <p>UV index:<span class="current bg-danger rounded py-2 px-2 text-white" id="uv-index">12.84</span></p> 
+                    </div>
+                </div>
+                <!--Row for future data to be dumped here-->
+                <div class="col-sm-12" id="future-weather">
+                    <h3>5-Day Forecast:</h3>
+                    <div class="row text-light">
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate0">5/8/2021</p>
+                            <p id="fImg0"><img src="./index17_files/04n.png"></p>
+                            <p>Temp:<span id="fTemp0">28.36°C</span></p>
+                            <p>Humidity:<span id="fHumidity0">73%</span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate1">5/9/2021</p>
+                            <p id="fImg1"><img src="./index17_files/10n.png"></p>
+                            <p>Temp:<span id="fTemp1">24.83°C</span></p>
+                            <p>Humidity:<span id="fHumidity1">85%</span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate2">5/10/2021</p>
+                            <p id="fImg2"><img src="./index17_files/04n.png"></p>
+                            <p>Temp:<span id="fTemp2">27.66°C</span></p>
+                            <p>Humidity:<span id="fHumidity2">78%</span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate3">5/11/2021</p>
+                            <p id="fImg3"><img src="./index17_files/02n.png"></p>
+                            <p>Temp:<span id="fTemp3">27.36°C</span></p>
+                            <p>Humidity:<span id="fHumidity3">77%</span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate4">5/12/2021</p>
+                            <p id="fImg4"><img src="./index17_files/01d.png"></p>
+                            <p>Temp:<span id="fTemp4">26.89°C</span></p>
+                            <p>Humidity:<span id="fHumidity4">73%</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+		<footer class="mt-5 p-3 text-center bg-light">
+			<strong>DEVELOPED BY :- VIDHI RANA</strong><br>
+			<strong>CAIT,AAU,ANAND</strong>
+			<link rel="stylesheet" type="text/css" href="file://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+			
+			
+				
+			
+		</footer>
+
+    <!--jQuery JS-->
+    <script src="./index17_files/jquery.js.download"></script>
+    <script src="./index17_files/bootstrap.bundle.min.js.download"></script>
+    <!--Code to Jvascript File-->
+    <script src="./index17_files/script.js.download"></script>
+
+</body></html>
